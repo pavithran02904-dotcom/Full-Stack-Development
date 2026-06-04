@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .checkout-container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .checkout-form,
+    .order-summary {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .row .input-group {
+      flex: 1;
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .total {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      background: #007bff;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .checkout-container {
+        grid-template-columns: 1fr;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="checkout-container">
+
+    <!-- Checkout Form -->
+    <div class="checkout-form">
+
+      <h2>Checkout</h2>
+
+      <form>
+
+        <div class="input-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your name">
+        </div>
+
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter your email">
+        </div>
+
+        <div class="input-group">
+          <label>Shipping Address</label>
+          <input type="text" placeholder="Enter address">
+        </div>
+
+        <div class="row">
+
+          <div class="input-group">
+            <label>City</label>
+            <input type="text" placeholder="City">
+          </div>
+
+          <div class="input-group">
+            <label>ZIP Code</label>
+            <input type="text" placeholder="ZIP">
+          </div>
+
+        </div>
+
+        <h2>Payment Details</h2>
+
+        <div class="input-group">
+          <label>Card Holder Name</label>
+          <input type="text" placeholder="Card holder name">
+        </div>
+
+        <div class="input-group">
+          <label>Card Number</label>
+          <input type="text" placeholder="1234 5678 9012 3456">
+        </div>
+
+        <div class="row">
+
+          <div class="input-group">
+            <label>Expiry Date</label>
+            <input type="text" placeholder="MM/YY">
+          </div>
+
+          <div class="input-group">
+            <label>CVV</label>
+            <input type="password" placeholder="123">
+          </div>
+
+        </div>
+
+        <button type="submit">
+          Place Order
+        </button>
+
+      </form>
+
+    </div>
+
+    <!-- Order Summary -->
+    <div class="order-summary">
+
+      <h2>Order Summary</h2>
+
+      <div class="summary-item">
+        <span>Wireless Headphones</span>
+        <span>$59.99</span>
+      </div>
+
+      <div class="summary-item">
+        <span>Smart Watch</span>
+        <span>$89.99</span>
+      </div>
+
+      <div class="summary-item">
+        <span>Shipping</span>
+        <span>$10.00</span>
+      </div>
+
+      <div class="summary-item total">
+        <span>Total</span>
+        <span>$159.98</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
